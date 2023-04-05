@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+p = [0]*101
+p[1]=1
+p[2]=1
+p[3]=1
+p[4]=2
+p[5]=2
+p[6]=3
+for i in range(7,101):
+    p[i] = p[i-1] + p[i-5]
+
+    
+
+
+T = int(input())
+
+for i in range(T):
+    N = int(input())
+    print(p[N])
